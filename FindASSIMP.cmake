@@ -5,18 +5,34 @@
 #  ASSIMP_INCLUDE_DIR - the Assimp include directories
 #  ASSIMP_LIBRARIES - link these to use Assimp
 
+# The following files were modified by Robert Hildebrandt to allow finding assimp also in other directories
 FIND_PATH( ASSIMP_INCLUDE_DIR assimp/mesh.h
-  /usr/include
-  /usr/local/include
-  /opt/local/include
+  HINTS
+  ${ASSIMP_ROOT}
+  $ENV{ASSIMP_ROOT}
+  $ENV{HOME}/.local
+  PATHS
+  /usr
+  /usr/local
+  /opt/local
+  PATH_SUFFIXES
+  include
 )
 
 FIND_LIBRARY( ASSIMP_LIBRARY assimp
-  /usr/lib64
-  /usr/lib
-  /usr/local/lib
-  /opt/local/lib
+  HINTS
+  ${ASSIMP_ROOT}
+  $ENV{ASSIMP_ROOT}
+  $ENV{HOME}/.local
+  PATHS
+  /usr
+  /usr/local
+  /opt/local
+  PATH_SUFFIXES
+  lib64
+  lib
 )
+# End of modifications
 
 IF(ASSIMP_INCLUDE_DIR AND ASSIMP_LIBRARY)
   SET( ASSIMP_FOUND TRUE )

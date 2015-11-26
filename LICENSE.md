@@ -6,6 +6,8 @@ This repository is a collection of cmake finder scripts. All modifications I've 
 
 Originally uploaded [on github.com](https://github.com/arpg/rpg-cmake/blob/8865abdd0b6e7937c23b8587e44151fa845f924e/FindASSIMP.cmake)
 
+Modified by Robert Hildebrandt
+
 [Apache License](https://github.com/arpg/rpg-cmake/blob/5fa579032582b9d3af2cf1b96648fb3cd4784e63/LICENSE.md)
 
 > Apache License
