@@ -31,6 +31,7 @@ FIND_LIBRARY( ASSIMP_LIBRARY assimp
   PATH_SUFFIXES
   lib64
   lib
+  build/code
 )
 # End of modifications
 
