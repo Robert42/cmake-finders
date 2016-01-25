@@ -31,6 +31,10 @@
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 # See the License for more information.
 #=============================================================================
+# Copyright 2016 Modified by Robert Hildebrandt to provide
+#
+# Modifications made are licensed by CC-0 (see accompanying file License.md)
+#=============================================================================
 # (To distribute this file outside of CMake, substitute the full
 #  License text for the above reference.)
 
@@ -89,3 +93,11 @@ find_package_handle_standard_args(SDL2
                                   VERSION_VAR SDL2_VERSION_STRING)
 
 mark_as_advanced(SDL2_INCLUDE_DIR SDL2_LIBRARY)
+
+# Begin modification by Robert Hildebrandt
+if(NOT TARGET sdl2)
+  add_library(sdl2 INTERFACE)
+  target_include_directories(sdl2 INTERFACE ${SDL2_INCLUDE_DIRS})
+  target_link_libraries(sdl2 INTERFACE ${SDL2_LIBRARIES})
+endif()
+# End modification by Robert Hildebrandt

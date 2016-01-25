@@ -49,3 +49,11 @@ ELSE(ASSIMP_FOUND)
       MESSAGE(FATAL_ERROR "Could not find libASSIMP")
    ENDIF(ASSIMP_FIND_REQUIRED)
 ENDIF(ASSIMP_FOUND)
+
+# The following lines were modified by Robert Hildebrandt to allow finding assimp to provide a target interface
+if(NOT TARGET assimp)
+  add_library(assimp INTERFACE)
+  target_include_directories(assimp INTERFACE ${ASSIMP_INCLUDE_DIR})
+  target_link_libraries(assimp INTERFACE ${ASSIMP_LIBRARY})
+endif()
+# End of modifications

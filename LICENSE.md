@@ -257,6 +257,8 @@ More detailed License (extraced from the [Copyright.txt](https://cmake.org/gitwe
 > (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 > OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+Modified by Robert Hildebrandt
+
 ## FindSFML.cmake
 
 Originally uploaded [on github.com](https://github.com/SFML/SFML/blob/18193a5cde31e837ebb17a3fb238a892cda90a06/cmake/Modules/FindSFML.cmake)
