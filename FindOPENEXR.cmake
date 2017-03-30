@@ -1,4 +1,4 @@
-pkg_check_modules(OPENEXR OpenEXR)
+pkg_check_modules(OPENEXR REQUIRED OpenEXR)
 
 if(NOT TARGET open_exr)
   add_library(open_exr INTERFACE)
